@@ -1,54 +1,38 @@
 {
   "name": "resume-editor",
-  "version": "0.1.0",
+  "version": "0.0.1",
+  "description": "resume-editor",
+  "productName": "resume-editor",
+  "cordovaId": "com.jetthoughts.resumeeditor",
+  "capacitorId": "",
+  "author": "",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint",
-    "dist:staging": "vue-cli-service build && surge ./dist resume-editor-hc.surge.sh",
-    "electron:build": "vue-cli-service electron:build",
-    "electron:serve": "vue-cli-service electron:serve",
-    "postinstall": "electron-builder install-app-deps",
-    "postuninstall": "electron-builder install-app-deps"
+    "build": "quasar build",
+    "deploy": "now",
+    "lint": "eslint --ext .js,.vue src",
+    "test": "echo \"No test specified\" && exit 0"
   },
-  "main": "background.js",
   "dependencies": {
-    "core-js": "^3.4.8",
-    "moment": "^2.24.0",
-    "register-service-worker": "^1.6.2",
-    "vee-validate": "^2.2.10",
-    "vue": "^2.6.10",
-    "vue-monthly-picker": "^0.2.8",
-    "vue-router": "^3.0.3",
-    "vuedraggable": "^2.21.0",
-    "vuex": "^3.1.2"
+    "@quasar/extras": "^1.0.0",
+    "axios": "^0.18.1",
+    "quasar": "^1.0.0",
+    "vue-i18n": "^8.0.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.1.1",
-    "@vue/cli-plugin-e2e-cypress": "^4.1.1",
-    "@vue/cli-plugin-eslint": "^4.1.1",
-    "@vue/cli-plugin-pwa": "^4.1.1",
-    "@vue/cli-plugin-unit-jest": "^4.1.1",
-    "@vue/cli-service": "^4.1.1",
-    "@vue/eslint-config-prettier": "^5.0.0",
-    "@vue/test-utils": "1.0.0-beta.30",
-    "babel-core": "7.0.0-bridge.0",
+    "@quasar/app": "^1.0.0",
+    "@vue/eslint-config-standard": "^4.0.0",
     "babel-eslint": "^10.0.1",
-    "babel-jest": "^24.9.0",
-    "dart-sass": "^1.23.7",
-    "electron": "^7.1.4",
-    "eslint": "^6.7.2",
-    "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-vue": "^6.0.1",
-    "fibers": "^4.0.2",
-    "flush-promises": "^1.0.2",
-    "sass": "^1.23.7",
-    "sass-loader": "^8.0.0",
-    "tailwindcss": "^1.1.4",
-    "vue-cli-plugin-electron-builder": "^1.4.3",
-    "vue-template-compiler": "^2.6.10"
-  }
+    "eslint": "^5.10.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-vue": "^5.0.0"
+  },
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0",
+    "yarn": ">= 1.6.0"
+  },
+  "browserslist": [
+    "last 1 version, not dead, ie >= 11"
+  ]
 }

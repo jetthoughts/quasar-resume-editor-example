@@ -26,7 +26,7 @@
       </q-toolbar>
     </q-header>
 
-    <div class="fixed-left">
+    <div class="fixed-left" style="z-index: 99">
       <q-drawer
         v-model="leftDrawerOpen"
         show-if-above

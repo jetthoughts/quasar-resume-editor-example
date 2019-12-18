@@ -28,6 +28,7 @@ yarn-error.log*
 # Quasar core related directories
 .quasar
 /dist
+/public
 
 # Cordova related directories and files
 /src-cordova/node_modules
